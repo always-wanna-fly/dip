@@ -4,6 +4,7 @@ add_action('wp_enqueue_scripts', 'style_theme');
 add_action('wp_footer', 'scripts_theme');
 add_action('after_setup_theme', 'theme_register_nav_menu');
 add_action('widgets_init', 'register_my_widgets');
+add_filter('document_title_separator', 'my_sep');
 
 function style_theme(){
     wp_enqueue_style('style', get_stylesheet_uri() );
@@ -37,4 +38,8 @@ function register_my_widgets(){
         'before_title'=>'<h5 class="widgettitle">',
         'after_title'=>"</h5>\n"
     ));
+}
+function my_sep($sep){
+     $sep = ' | ';
+     return $sep;
 }
