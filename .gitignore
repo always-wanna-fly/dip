@@ -5,5 +5,5 @@
 wp-content/*
 !wp-content/themes/
 wp-content/themes/*
-!wp-content/themes/world
+!wp-content/themes/diplom
 
