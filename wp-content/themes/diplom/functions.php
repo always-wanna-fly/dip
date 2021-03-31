@@ -21,6 +21,9 @@ function theme_register_nav_menu(){
     register_nav_menu('top', 'Верхнє меню');
     register_nav_menu('bottom', 'Нижнє меню');
     register_nav_menu('social', 'Наші соцмережі');
+    add_theme_support('title-tag');
+    add_theme_support('post-thumbnails', array('post'));
+    add_image_size('post_thumb', 1300, 500, true );
 
 }
 
